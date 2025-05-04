@@ -118,7 +118,7 @@
           you, to make you smile, and to remind you just how much you mean to
           me.
         </p>
-        <div class="signature">With Love,<br />Your Admirer</div>
+        <div class="signature">joyeux anniversaire ,<br />la relation de 6.300km</div>
         <div class="heart-below">❤️</div>
       </div>
     </div>
