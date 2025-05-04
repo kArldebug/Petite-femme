@@ -1,1 +1,133 @@
-# Petite-femme
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dear Crush</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Georgia", serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #ffd6e8; /* Arrière-plan rose clair */
+        flex-direction: column;
+      }
+
+      .click-heart {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #d6336c;
+      }
+
+      .heart-button {
+        font-size: 24px;
+        background-color: white;
+        border: none;
+        padding: 10px 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .heart-button:hover {
+        transform: scale(1.05);
+      }
+
+      .heart {
+        color: red;
+        font-size: 24px;
+        margin-left: 10px;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .envelope {
+        width: 500px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        transform-origin: top;
+        transition: transform 1.5s ease, opacity 01.5s ease,
+          max-height 01.5s ease;
+        max-height: 0;
+        opacity: 0;
+      }
+
+      .envelope.open {
+        max-height: 1000px;
+        opacity: 1;
+        padding: 25px;
+      }
+
+      .letter h2 {
+        margin-top: 0;
+        text-align: center;
+        font-size: 24px;
+        letter-spacing: 1px;
+      }
+
+      .letter p {
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .signature {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+
+      .heart-below {
+        text-align: center;
+        font-size: 20px;
+        color: red;
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="click-heart">Click the heart!</div>
+    <button class="heart-button" onclick="toggleLetter()">
+      DEAR CRUSH
+      <span class="heart">❤️</span>
+    </button>
+
+    <div class="envelope" id="envelope">
+      <div class="letter">
+        <h2>Dear Crush,</h2>
+        <p>
+          I've been keeping this in for a while, but I think Valentine's Day is
+          the perfect time to say it—you’re the reason my days feel brighter.
+          Every little moment with you means more than I can put into words.
+          Your smile, your laughter, the way you make everything feel lighter—it
+          all makes my heart race in the best way possible.
+        </p>
+        <p>
+          So, here it is... I like you. A lot. Maybe even love. Would you be my
+          Valentine? No matter your answer, I just wanted you to know how
+          special you are to me. You've filled my heart with warmth in ways I
+          never expected, and for that, I'm grateful. But if you say yes, I
+          promise to make every day feel like Valentine’s Day for you—to cherish
+          you, to make you smile, and to remind you just how much you mean to
+          me.
+        </p>
+        <div class="signature">With Love,<br />Your Admirer</div>
+        <div class="heart-below">❤️</div>
+      </div>
+    </div>
+
+    <script>
+      function toggleLetter() {
+        const envelope = document.getElementById("envelope");
+        envelope.classList.toggle("open");
+      }
+    </script>
+  </body>
+</html>
